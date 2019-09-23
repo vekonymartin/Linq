@@ -21,6 +21,12 @@ namespace Linq
 
             Console.WriteLine("\n" + new string('=', 40));
         }
+        public static void Title(string title)
+        {
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
+            Console.WriteLine(title + " : ");
+            Console.ForegroundColor = ConsoleColor.Gray;
+        }
 
         public static void Introduction()
         {
@@ -44,23 +50,24 @@ namespace Linq
                               where x % 2 == 0
                               select x;
 
-            Console.WriteLine("Query syntax");
+            Title("Query syntax");
             Process(list);
             // find even number with LINQ (method syntax + lamda)
             var evenNumer2 = list.Where(x => x % 2 == 0);
 
-            Console.WriteLine("Method syntax + lamda");
+            Title("Method syntax + lamda");
             Process(list);
         }
 
-        public static List<Student> DataGeneration(List<Student> list)
+        public static List<Student> DataGeneration(ref List<Student> list)
         {
             list = new List<Student>();
-            list.Add(new Student() { Name = "Harry Potter" });
-            list.Add(new Student() { Name = "Dart Vader" });
-            list.Add(new Student() { Name = "John Rambo" });
-            list.Add(new Student() { Name = "Obi-one Kenobi" });
-            list.Add(new Student() { Name = "Voldemort" });
+            list.Add(new Student() { Name = "Harry Potter", Age= 17});
+            list.Add(new Student() { Name = "Darth Vader", Age = 40});
+            list.Add(new Student() { Name = "John Rambo", Age = 50 });
+            list.Add(new Student() { Name = "Obi-one Kenobi", Age = 60 });
+            list.Add(new Student() { Name = "Voldemort", Age = 80 });
+            list.Add(new Student() { Name = "darth Sidious", Age = 130 });
 
             return list;
         }
@@ -74,7 +81,7 @@ namespace Linq
 
 
             List<Student> students = new List<Student>();
-            DataGeneration(students);
+            DataGeneration(ref students);
 
 
             #region Introductory examples
@@ -88,6 +95,29 @@ namespace Linq
 
             Console.WriteLine(new string('=', 40));
             Process(nameDay);
+            #endregion
+
+            #region Task 1
+            /*
+             * We've database in list, let's do a query that count the name of Darth
+             * Create array with this number
+             * and we copy Darth objects to this array
+             * 
+             * Pay attention to lowercase and appercase in the database
+             */
+
+            Title("Task 1");
+
+            int dbNumber = students.Count(x => x.Name.ToUpper().Contains("darth".ToUpper()));
+            var darth = students.Where(x => x.Name.ToUpper().Contains("darth".ToUpper()));
+
+            Student[] chosedOne = new Student[dbNumber];
+            int index = 0;
+
+            foreach (var item in darth)
+                chosedOne[index++] = item;
+
+            Process(chosedOne);
             #endregion
 
 
