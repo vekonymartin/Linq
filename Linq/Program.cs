@@ -62,12 +62,12 @@ namespace Linq
         public static List<Student> DataGeneration(ref List<Student> list)
         {
             list = new List<Student>();
-            list.Add(new Student() { Name = "Harry Potter", Age= 17});
-            list.Add(new Student() { Name = "Darth Vader", Age = 40});
-            list.Add(new Student() { Name = "John Rambo", Age = 50 });
-            list.Add(new Student() { Name = "Obi-one Kenobi", Age = 60 });
-            list.Add(new Student() { Name = "Voldemort", Age = 80 });
-            list.Add(new Student() { Name = "darth Sidious", Age = 130 });
+            list.Add(new Student() { Name = "Harry Potter" });
+            list.Add(new Student() { Name = "Darth Vader"});
+            list.Add(new Student() { Name = "John Rambo"});
+            list.Add(new Student() { Name = "Obi-one Kenobi"});
+            list.Add(new Student() { Name = "Voldemort"});
+            list.Add(new Student() { Name = "darth Sidious"});
 
             return list;
         }
@@ -120,7 +120,81 @@ namespace Linq
             Process(chosedOne);
             #endregion
 
+            #region Task 2
+            /*
+             * Queried students, whose age between 20 and 50
+             * and they're not in the relationship,
+             * supplement the student class.
+             * 
+             * Supplementing student data (age + relationship)
+             */
 
+            Title("Task 2");
+
+            Random r = new Random();
+
+            for (int i = 0; i < students.Count; i++)
+            {
+                Predicate<int> relationshipChoice = x => { return x == 0; };
+
+                students[i].Relationship = (bool)relationshipChoice?.Invoke(r.Next(2));
+                students[i].Age = r.Next(30, 131);
+            }
+
+            Process(students);
+
+            // Queried students
+
+            var studentQuery = students.Where(x =>
+            {
+                return x.Relationship == true && (x.Age > 20 && x.Age < 51);
+            });
+
+            Title("Task 2 - Query");
+            Process(studentQuery);
+
+            #endregion
+
+            #region Task 3
+            /*
+             * Make query, who is in relationship
+             * after that, order by name 
+             * and change uppercase all character
+             */
+
+            var relationshipQuery = students.Where(x => x.Relationship == true)
+                .OrderBy(x => x.Name)
+                .Select(x => x.Name.ToUpper());
+
+            Title("Task 3");
+            Process(relationshipQuery);
+            #endregion
+
+            #region Task 4
+            /*
+             * 
+             */
+
+            var group1 = students.GroupBy(x => x.Relationship);
+
+            //var group2 = from x in students
+            //             group x by x.Relationship into xres
+            //             select new { group = xres.Key, count = xres.Count() };
+
+            foreach (var item in group1)
+                Console.WriteLine("Group: (0) <> count: {1}",item.Key,item.Count());
+
+            //foreach (var item in group2)
+            //    Console.WriteLine"Group: (0) <> count: {1}",item.group,item.count);
+
+            #endregion
+
+            #region Task 5
+            /*
+             * 
+             */
+
+            #endregion 
         }
     }
 }

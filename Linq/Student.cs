@@ -8,13 +8,13 @@ namespace Linq
 {
     class Student
     {
-        public string Name  { get; set; }
-        public int Age      { get; set; }
-        public bool Link    { get; set; }
+        public string Name          { get; set; }
+        public int Age              { get; set; }
+        public bool Relationship    { get; set; }
 
         public override string ToString()
         {
-            return Name + " " + Age + " " + Link;
+            return Name + " " + Age + " " + Relationship;
         } 
     }
 }
