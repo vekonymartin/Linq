@@ -52,9 +52,45 @@ namespace Linq
             Console.WriteLine("Method syntax + lamda");
             Process(list);
         }
+
+        public static List<Student> DataGeneration(List<Student> list)
+        {
+            list = new List<Student>();
+            list.Add(new Student() { Name = "Harry Potter" });
+            list.Add(new Student() { Name = "Dart Vader" });
+            list.Add(new Student() { Name = "John Rambo" });
+            list.Add(new Student() { Name = "Obi-one Kenobi" });
+            list.Add(new Student() { Name = "Voldemort" });
+
+            return list;
+        }
+
+
         static void Main(string[] args)
         {
+            #region Introduction
             Introduction();
+            #endregion
+
+
+            List<Student> students = new List<Student>();
+            DataGeneration(students);
+
+
+            #region Introductory examples
+
+            var orderedStudents = students.OrderBy(x => x.Name);
+
+            Console.WriteLine(new string('=', 40));
+            Process(orderedStudents);
+
+            var nameDay = students.Where(x => x.Name.Contains("John"));
+
+            Console.WriteLine(new string('=', 40));
+            Process(nameDay);
+            #endregion
+
+
         }
     }
 }
