@@ -1,0 +1,7 @@
+C:\Github\Linq\01_Delegate\bin\Debug\01_Delegate.exe.config
+C:\Github\Linq\01_Delegate\bin\Debug\01_Delegate.exe
+C:\Github\Linq\01_Delegate\bin\Debug\01_Delegate.pdb
+C:\Github\Linq\01_Delegate\obj\Debug\01_Delegate.csprojAssemblyReference.cache
+C:\Github\Linq\01_Delegate\obj\Debug\01_Delegate.csproj.CoreCompileInputs.cache
+C:\Github\Linq\01_Delegate\obj\Debug\01_Delegate.exe
+C:\Github\Linq\01_Delegate\obj\Debug\01_Delegate.pdb
