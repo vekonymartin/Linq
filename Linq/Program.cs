@@ -14,7 +14,7 @@ namespace Linq
         {
             // can't use .length or count, because list is generic type
 
-            Console.WriteLine(new string('=',40));
+            Console.WriteLine(new string('=', 40));
 
             foreach (var item in list)
                 Console.Write(item + ", ");
@@ -63,11 +63,11 @@ namespace Linq
         {
             list = new List<Student>();
             list.Add(new Student() { Name = "Harry Potter" });
-            list.Add(new Student() { Name = "Darth Vader"});
-            list.Add(new Student() { Name = "John Rambo"});
-            list.Add(new Student() { Name = "Obi-one Kenobi"});
-            list.Add(new Student() { Name = "Voldemort"});
-            list.Add(new Student() { Name = "darth Sidious"});
+            list.Add(new Student() { Name = "Darth Vader" });
+            list.Add(new Student() { Name = "John Rambo" });
+            list.Add(new Student() { Name = "Obi-one Kenobi" });
+            list.Add(new Student() { Name = "Voldemort" });
+            list.Add(new Student() { Name = "darth Sidious" });
 
             return list;
         }
@@ -171,30 +171,65 @@ namespace Linq
             #endregion
 
             #region Task 4
-            /*
-             * 
+            /* Make query, where we write to console that person, who are are/'re not in relationship
+             * after that make groups and put it them in and count these groups
              */
 
             var group1 = students.GroupBy(x => x.Relationship);
 
-            //var group2 = from x in students
-            //             group x by x.Relationship into xres
-            //             select new { group = xres.Key, count = xres.Count() };
+            var group2 = from x in students
+                         group x by x.Relationship into xres
+                         select new { gro = xres.Key, count = xres.Count() };
 
             foreach (var item in group1)
-                Console.WriteLine("Group: (0) <> count: {1}",item.Key,item.Count());
+                Console.WriteLine("Group: {0} <> count: {1}",item.Key,item.Count());
 
-            //foreach (var item in group2)
-            //    Console.WriteLine"Group: (0) <> count: {1}",item.group,item.count);
+            Console.WriteLine(new string('-',25));
+
+            foreach (var item in group2)
+                Console.WriteLine("Group: {0} <> count: {1}",item.gro,item.count);
 
             #endregion
 
             #region Task 5
             /*
+             * Make query, where the name is include 'e' or 'E' character
+             * 
+             * Change these name to uppercase and put names in new object
+             * store age another property, too
+             * 
+             * Sort by age
+             */
+
+            var eStudent = from x in students
+                           where x.Name.Contains('e')
+                           orderby x.Name.Contains('E')
+                           orderby x.Age
+                           select new { studentName = x.Name.ToUpper(),
+                                        ageStudent = x.Age,
+                                        relationshipStudent = x.Relationship
+                           };
+
+            Title("Task 5 a)");
+            Process(eStudent);
+
+            /*
+             * make the same query, but now make a group by relationship
+             * after that, look at this group's age ofaverage
              * 
              */
 
-            #endregion 
+            var aStudemt = from x in eStudent
+                           group x by x.relationshipStudent into g
+                           select new { Average = g.Average(a => a.ageStudent),
+                                        Count = g.Count(),
+                                        Group = g.Key
+                           };
+
+            Title("Task 5 b)");
+            Process(aStudemt);
+
+            #endregion
         }
     }
 }
