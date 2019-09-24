@@ -1,0 +1,7 @@
+C:\Git\Github\Linq\03_BuiltInDelegateExamples\bin\Debug\03_BuiltInDelegateExamples.exe.config
+C:\Git\Github\Linq\03_BuiltInDelegateExamples\bin\Debug\03_BuiltInDelegateExamples.exe
+C:\Git\Github\Linq\03_BuiltInDelegateExamples\bin\Debug\03_BuiltInDelegateExamples.pdb
+C:\Git\Github\Linq\03_BuiltInDelegateExamples\obj\Debug\03_BuiltInDelegateExamples.csprojAssemblyReference.cache
+C:\Git\Github\Linq\03_BuiltInDelegateExamples\obj\Debug\03_BuiltInDelegateExamples.csproj.CoreCompileInputs.cache
+C:\Git\Github\Linq\03_BuiltInDelegateExamples\obj\Debug\03_BuiltInDelegateExamples.exe
+C:\Git\Github\Linq\03_BuiltInDelegateExamples\obj\Debug\03_BuiltInDelegateExamples.pdb

@@ -1,0 +1,7 @@
+C:\Git\Github\Linq\02_BuiltInDelegate\obj\Debug\02_BuiltInDelegate.csprojAssemblyReference.cache
+C:\Git\Github\Linq\02_BuiltInDelegate\obj\Debug\02_BuiltInDelegate.csproj.CoreCompileInputs.cache
+C:\Git\Github\Linq\02_BuiltInDelegate\bin\Debug\02_BuiltInDelegate.exe.config
+C:\Git\Github\Linq\02_BuiltInDelegate\bin\Debug\02_BuiltInDelegate.exe
+C:\Git\Github\Linq\02_BuiltInDelegate\bin\Debug\02_BuiltInDelegate.pdb
+C:\Git\Github\Linq\02_BuiltInDelegate\obj\Debug\02_BuiltInDelegate.exe
+C:\Git\Github\Linq\02_BuiltInDelegate\obj\Debug\02_BuiltInDelegate.pdb
