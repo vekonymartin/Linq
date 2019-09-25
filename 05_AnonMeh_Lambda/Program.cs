@@ -35,6 +35,22 @@ namespace _05_AnonMeh_Lambda
 
             // Use lambda expression mathcing Predicate<T>
             List<Person> sol3 = friends.FindAll(p => p.Age > 30);
+
+            Person[] array = friends.ToArray();
+
+            // Sorting by name length
+            // Used named method matching Comparison<T>
+            Array.Sort(array, SpecialComparer);
+
+            // Used anonymus method matching Comparison<T>
+            Array.Sort(array, delegate (Person p1, Person p2) 
+            {
+                return p1.Name[0].CompareTo(p2.Name[0]);
+            });
+
+            // Use lambda exp. matching Comparison<T>
+            Array.Sort(array, (p1, p2) => p1.Name[0].CompareTo(p2.Name[0]));
+
         }
     }
 }

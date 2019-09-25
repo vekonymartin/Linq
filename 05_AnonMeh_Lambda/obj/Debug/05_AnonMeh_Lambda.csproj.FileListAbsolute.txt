@@ -1,0 +1,7 @@
+C:\Git\Github\Linq\05_AnonMeh_Lambda\bin\Debug\05_AnonMeh_Lambda.exe.config
+C:\Git\Github\Linq\05_AnonMeh_Lambda\bin\Debug\05_AnonMeh_Lambda.exe
+C:\Git\Github\Linq\05_AnonMeh_Lambda\bin\Debug\05_AnonMeh_Lambda.pdb
+C:\Git\Github\Linq\05_AnonMeh_Lambda\obj\Debug\05_AnonMeh_Lambda.csprojAssemblyReference.cache
+C:\Git\Github\Linq\05_AnonMeh_Lambda\obj\Debug\05_AnonMeh_Lambda.csproj.CoreCompileInputs.cache
+C:\Git\Github\Linq\05_AnonMeh_Lambda\obj\Debug\05_AnonMeh_Lambda.exe
+C:\Git\Github\Linq\05_AnonMeh_Lambda\obj\Debug\05_AnonMeh_Lambda.pdb
