@@ -1,0 +1,7 @@
+C:\Git\Github\Linq\04_DelegateVSEvents\obj\Debug\04_DelegateVSEvents.csprojAssemblyReference.cache
+C:\Git\Github\Linq\04_DelegateVSEvents\obj\Debug\04_DelegateVSEvents.csproj.CoreCompileInputs.cache
+C:\Git\Github\Linq\04_DelegateVSEvents\bin\Debug\04_DelegateVSEvents.exe.config
+C:\Git\Github\Linq\04_DelegateVSEvents\bin\Debug\04_DelegateVSEvents.exe
+C:\Git\Github\Linq\04_DelegateVSEvents\bin\Debug\04_DelegateVSEvents.pdb
+C:\Git\Github\Linq\04_DelegateVSEvents\obj\Debug\04_DelegateVSEvents.exe
+C:\Git\Github\Linq\04_DelegateVSEvents\obj\Debug\04_DelegateVSEvents.pdb
