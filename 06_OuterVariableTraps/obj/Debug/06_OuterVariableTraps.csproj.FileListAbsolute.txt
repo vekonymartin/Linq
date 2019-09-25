@@ -1,0 +1,7 @@
+C:\Git\Github\Linq\06_OuterVariableTraps\obj\Debug\06_OuterVariableTraps.csprojAssemblyReference.cache
+C:\Git\Github\Linq\06_OuterVariableTraps\obj\Debug\06_OuterVariableTraps.csproj.CoreCompileInputs.cache
+C:\Git\Github\Linq\06_OuterVariableTraps\bin\Debug\06_OuterVariableTraps.exe.config
+C:\Git\Github\Linq\06_OuterVariableTraps\bin\Debug\06_OuterVariableTraps.exe
+C:\Git\Github\Linq\06_OuterVariableTraps\bin\Debug\06_OuterVariableTraps.pdb
+C:\Git\Github\Linq\06_OuterVariableTraps\obj\Debug\06_OuterVariableTraps.exe
+C:\Git\Github\Linq\06_OuterVariableTraps\obj\Debug\06_OuterVariableTraps.pdb
